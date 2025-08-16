@@ -4,7 +4,7 @@ export const projects = [
     summary: "A simplistic website for my professional and academic needs. Enjoy.",
     tags: ["TypeScript", "Next.js", "Tailwind CSS"],
     image: "/projects/logo.png", // <-- leading slash, file in /public/projects/
-    github: "https://github.com/dzimm8726/Dylan-Zimmerman-Website/releases/tag/1.0",
+    github: "https://github.com/dzimm8726/Dylan-Zimmerman-Website",
     year: 2025,
     featured: true,
   },
