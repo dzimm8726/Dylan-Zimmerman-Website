@@ -4,11 +4,22 @@ import { useState } from 'react'
 import { projects } from '@/lib/projects'
 import Image from 'next/image'
 
+// Define the project type
+type Project = {
+  title: string;
+  summary: string;
+  tags: string[];
+  image: string;
+  github: string;
+  year: number;
+  featured: boolean;
+}
+
 export default function ProjectsPage() {
   const [filter, setFilter] = useState('all')
-  const [selectedProject, setSelectedProject] = useState(null)
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null)
 
-  const handleCardClick = (project) => {
+  const handleCardClick = (project: Project) => {
     setSelectedProject(project)
   }
 
