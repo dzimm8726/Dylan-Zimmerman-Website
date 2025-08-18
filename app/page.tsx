@@ -60,7 +60,7 @@ export default function Home() {
     <main className="max-w-6xl mx-auto px-4 py-12">
       <header className="mb-12">
         <h1 className="text-4xl font-bold text-zinc-100">
-          Dylan Zimmerman - <span className="text-blue-400">Computer Science Student</span>
+          Dylan Zimmerman - <span className="text-blue-400">Computer Science Student.</span>
         </h1>
         <p className="mt-4 max-w-2xl text-zinc-300">
           CS major focused on building reliable, fast systems at the intersection of{" "}
