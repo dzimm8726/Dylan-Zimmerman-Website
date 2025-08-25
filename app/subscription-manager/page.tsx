@@ -1,4 +1,3 @@
-import { Link } from "lucide-react";
 import Link from "next/link";
 
 export default function SubscriptionManager() {
@@ -42,12 +41,12 @@ export default function SubscriptionManager() {
 
         {/* Privacy Policy Link */}
         <div className="text-center">
-          <a 
+          <Link 
             href="/privacy-policy" 
             className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium"
           >
             View Privacy Policy →
-          </a>
+          </Link>
         </div>
       </div>
     </div>
