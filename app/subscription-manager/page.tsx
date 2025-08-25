@@ -1,125 +1,44 @@
-import Image from "next/image";
 import Link from "next/link";
-import { ExternalLink } from "lucide-react";
 
-interface ProjectCardProps {
-  title: string;
-  description?: string;
-  summary?: string;
-  tags: string[];
-  link?: string;
-  image?: string;
-  imageAlt?: string;
-  githubUrl?: string;
-  github?: string;
-}
-
-export default function ProjectCard({ 
-  title = "", 
-  description = "",
-  summary = "",
-  tags = [], 
-  link = "", 
-  image = "", 
-  imageAlt = "",
-  githubUrl = "",
-  github = ""
-}: ProjectCardProps) {
-  const projectDescription = summary || description || "";
-  const projectGithubUrl = github || githubUrl;
-  const mainLink = link || projectGithubUrl || "#";
-
-  const handleImageClick = (e: React.MouseEvent) => {
-    if (projectGithubUrl) {
-      e.preventDefault();
-      window.open(projectGithubUrl, '_blank', 'noopener,noreferrer');
-    }
-  };
-
-  const handleCardClick = (e: React.MouseEvent) => {
-    if ((e.target as HTMLElement).closest('.image-container') || 
-        (e.target as HTMLElement).closest('.page-link')) {
-      return;
-    }
-    if (mainLink && mainLink !== "#") {
-      window.open(mainLink, '_blank', 'noopener,noreferrer');
-    }
-  };
-
+export default function SubscriptionManager() {
   return (
-    <div className="group">
-      <div 
-        onClick={handleCardClick}
-        className="block rounded-xl border border-white/10 bg-white/5 p-4 transition-all duration-300 hover:border-white/20 hover:bg-white/10 cursor-pointer"
-      >
-        <div>
-          <h3 className="text-lg font-semibold text-zinc-100 mb-2">
-            {title}
-          </h3>
-          <p className="text-sm text-zinc-400 mb-3">
-            {projectDescription}
-          </p>
-          
-          {image && (
-            <div 
-              className="image-container relative w-full h-48 mb-6 overflow-hidden rounded-lg bg-zinc-800 cursor-pointer"
-              onClick={handleImageClick}
-            >
-              <Image
-                src={image}
-                alt={imageAlt || title}
-                fill
-                className="object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-              {projectGithubUrl && (
-                <div className="absolute inset-0 bg-black/50 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg px-3 py-2 text-sm text-white font-medium">
-                    View Page
-                  </div>
-                </div>
-              )}
-            </div>
-          )}
-          
-          <div className="flex flex-wrap gap-2 mb-4">
-            {tags && tags.map((tag, index) => (
-              <span
-                key={index}
-                className="px-2 py-1 text-xs rounded-md bg-blue-500/20 text-blue-300 border border-blue-500/30"
-              >
-                {tag}
-              </span>
-            ))}
+    <div className="min-h-screen bg-white">
+      <nav className="border-b border-gray-200">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="py-6">
+            <Link href="/" className="text-lg font-medium text-gray-900 hover:text-gray-700">
+              Back to Portfolio
+            </Link>
           </div>
+        </div>
+      </nav>
 
-          {projectGithubUrl && (
-            <div className="page-link">
-              {projectGithubUrl.startsWith('http') ? (
-                <>
-                  {/* eslint-disable-next-line react/jsx-no-target-blank */}
-                  <a
-                    href={projectGithubUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center text-sm text-zinc-400 hover:text-zinc-200 transition-colors"
-                    onClick={(e) => e.stopPropagation()}
-                  >
-                    <ExternalLink size={16} className="mr-2" />
-                    View Page
-                  </a>
-                </>
-              ) : (
-                <Link
-                  href={projectGithubUrl}
-                  className="inline-flex items-center text-sm text-zinc-400 hover:text-zinc-200 transition-colors"
-                  onClick={(e) => e.stopPropagation()}
-                >
-                  <ExternalLink size={16} className="mr-2" />
-                  View Page
-                </Link>
-              )}
-            </div>
-          )}
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="text-center mb-12">
+          <h1 className="text-3xl font-bold text-gray-900 mb-6">
+            Subscription Manager
+          </h1>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            A simple mobile app to track and manage all your recurring subscriptions.
+          </p>
+        </div>
+
+        <div className="text-center mb-16">
+          <button 
+            disabled 
+            className="bg-gray-300 text-gray-500 px-8 py-3 rounded-lg text-lg font-medium cursor-not-allowed"
+          >
+            Coming Soon to Google Play
+          </button>
+        </div>
+
+        <div className="text-center">
+          <Link 
+            href="/privacy-policy" 
+            className="text-blue-600 hover:text-blue-800 font-medium"
+          >
+            View Privacy Policy
+          </Link>
         </div>
       </div>
     </div>
