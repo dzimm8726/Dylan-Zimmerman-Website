@@ -3,7 +3,6 @@ import Link from "next/link";
 export default function PrivacyPolicy() {
   return (
     <div className="min-h-screen bg-white">
-      {/* Navigation */}
       <nav className="border-b border-gray-200">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="py-6">
@@ -14,7 +13,6 @@ export default function PrivacyPolicy() {
         </div>
       </nav>
 
-      {/* Main Content */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="prose prose-gray max-w-none">
           <h1 className="text-3xl font-bold text-gray-900 mb-8">Privacy Policy</h1>
@@ -25,7 +23,7 @@ export default function PrivacyPolicy() {
           </div>
 
           <p className="text-lg text-gray-700 mb-8">
-            This Privacy Policy describes how Subscription Manager ("we," "our," or "us") collects, 
+            This Privacy Policy describes how Subscription Manager collects, 
             uses, and shares information when you use our mobile application.
           </p>
 
@@ -34,7 +32,7 @@ export default function PrivacyPolicy() {
             
             <h3 className="text-xl font-semibold text-gray-900 mb-3">Information You Provide</h3>
             <ul className="list-disc pl-6 mb-6 text-gray-700">
-              <li>Subscription details you manually enter (service names, subscription costs, renewal dates, billing cycles)</li>
+              <li>Subscription details you manually enter (service names, costs, renewal dates, billing cycles)</li>
               <li>Account preferences and settings</li>
               <li>Feedback and correspondence when you contact us</li>
             </ul>
@@ -67,7 +65,7 @@ export default function PrivacyPolicy() {
             </p>
             <p className="text-gray-700 mb-4">We may share information in the following circumstances:</p>
             <ul className="list-disc pl-6 mb-6 text-gray-700">
-              <li><strong>Service Providers:</strong> With trusted third-party services that help us operate our app (analytics, crash reporting, cloud storage)</li>
+              <li><strong>Service Providers:</strong> With trusted third-party services that help us operate our app</li>
               <li><strong>Legal Requirements:</strong> When required by law, legal process, or government request</li>
               <li><strong>Business Transfers:</strong> In connection with a merger, acquisition, or sale of assets</li>
               <li><strong>Safety:</strong> To protect the rights, property, or safety of our users or others</li>
@@ -79,8 +77,8 @@ export default function PrivacyPolicy() {
             <ul className="list-disc pl-6 mb-6 text-gray-700">
               <li><strong>Local Storage:</strong> Subscription data is primarily stored locally on your device</li>
               <li><strong>Cloud Backup:</strong> Optional cloud synchronization uses encrypted storage services</li>
-              <li><strong>Security Measures:</strong> We implement industry-standard security measures including data encryption, secure data transmission, and access controls</li>
-              <li><strong>Data Retention:</strong> We retain your information only as long as necessary to provide our services or as required by law</li>
+              <li><strong>Security Measures:</strong> We implement industry-standard security measures including data encryption</li>
+              <li><strong>Data Retention:</strong> We retain your information only as long as necessary to provide our services</li>
             </ul>
           </section>
 
@@ -95,7 +93,10 @@ export default function PrivacyPolicy() {
               <li><strong>Opt-out:</strong> Opt out of certain data processing activities</li>
             </ul>
             <p className="text-gray-700">
-              To exercise these rights, contact us at <a href="mailto:privacy@dylan-zimmerman.com" className="text-blue-600 hover:text-blue-800">privacy@dylan-zimmerman.com</a>
+              To exercise these rights, contact us at{" "}
+              <a href="mailto:privacy@dylan-zimmerman.com" className="text-blue-600 hover:text-blue-800">
+                privacy@dylan-zimmerman.com
+              </a>
             </p>
           </section>
 
@@ -137,7 +138,7 @@ export default function PrivacyPolicy() {
             </p>
             <ul className="list-disc pl-6 mb-6 text-gray-700">
               <li>Posting the updated policy in the app</li>
-              <li>Updating the "Last Updated" date</li>
+              <li>Updating the Last Updated date</li>
               <li>Sending notifications for significant changes</li>
             </ul>
           </section>
@@ -150,14 +151,17 @@ export default function PrivacyPolicy() {
             </p>
             <div className="bg-gray-50 p-4 rounded-lg">
               <p className="text-gray-700">
-                <strong>Email:</strong> <a href="mailto:privacy@dylan-zimmerman.com" className="text-blue-600 hover:text-blue-800">privacy@dylan-zimmerman.com</a>
+                <strong>Email:</strong>{" "}
+                <a href="mailto:privacy@dylan-zimmerman.com" className="text-blue-600 hover:text-blue-800">
+                  privacy@dylan-zimmerman.com
+                </a>
               </p>
               <p className="text-gray-700">
-                <strong>Website:</strong> 
+                <strong>Website:</strong>{" "}
                 {/* eslint-disable-next-line react/jsx-no-target-blank */}
                 <a 
                   href="https://dylan-zimmerman.com" 
-                  className="text-blue-600 hover:text-blue-800 ml-1"
+                  className="text-blue-600 hover:text-blue-800"
                   target="_blank" 
                   rel="noopener noreferrer"
                 >
