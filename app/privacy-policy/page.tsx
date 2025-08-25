@@ -1,3 +1,5 @@
+import Link from "next/link"
+
 export default function PrivacyPolicy() {
   return (
     <div className="min-h-screen bg-white">
@@ -5,9 +7,9 @@ export default function PrivacyPolicy() {
       <nav className="border-b border-gray-200">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="py-6">
-            <a href="/subscription-manager" className="text-lg font-medium text-gray-900 hover:text-gray-700">
+            <Link href="/subscription-manager" className="text-lg font-medium text-gray-900 hover:text-gray-700">
               ← Back to Subscription Manager
-            </a>
+            </Link>
           </div>
         </div>
       </nav>
@@ -138,6 +140,19 @@ export default function PrivacyPolicy() {
               <li>Updating the "Last Updated" date</li>
               <li>Sending notifications for significant changes</li>
             </ul>
+          </section>
+
+          <section className="mb-8">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Contact Information</h2>
+            <p className="text-gray-700 mb-4">
+              If you have questions, concerns, or requests regarding this Privacy Policy or 
+              your personal information:
+            </p>
+            <div className="bg-gray-50 p-4 rounded-lg">
+              <p className="text-gray-700"><strong>Email:</strong> <a href="mailto:privacy@dylan-zimmerman.com" className="text-blue-600 hover:text-blue-800">privacy@dylan-zimmerman.com</a></p>
+              <p className="text-gray-700"><strong>Website:</strong> <a href="https://dylan-zimmerman.com" className="text-blue-600 hover:text-blue-800">https://dylan-zimmerman.com</a></p>
+              <p className="text-gray-700"><strong>Response Time:</strong> We aim to respond within 30 days</p>
+            </div>
           </section>
 
           <section className="mb-8">
