@@ -1,3 +1,6 @@
+import { Link } from "lucide-react";
+import Link from "next/link";
+
 export default function SubscriptionManager() {
   return (
     <div className="min-h-screen bg-white">
@@ -5,9 +8,9 @@ export default function SubscriptionManager() {
       <nav className="border-b border-gray-200">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="py-6">
-            <a href="/" className="text-lg font-medium text-gray-900 hover:text-gray-700">
+            <Link href="/" className="text-lg font-medium text-gray-900 hover:text-gray-700">
               ← Back to Portfolio
-            </a>
+            </Link>
           </div>
         </div>
       </nav>
