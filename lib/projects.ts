@@ -13,7 +13,7 @@ export const projects = [
     summary: "One simple app to manage all your subscriptions",
     tags: ["Flutter"],
     image: "/projects/1024.png", 
-    github: "",
+    github: "/subscription-manager",
     year: 2025,
     featured: true,
   },
