@@ -3,17 +3,17 @@ export const projects = [
     title: "This Website",
     summary: "A simplistic website for my professional and academic needs. Enjoy.",
     tags: ["TypeScript", "Next.js", "Tailwind CSS"],
-    image: "/projects/logo.png", // <-- leading slash, file in /public/projects/
+    image: "/projects/logo.png", 
     github: "https://github.com/dzimm8726/Dylan-Zimmerman-Website",
     year: 2025,
     featured: true,
   },
   {
-    title: "COMING SOON",
-    summary: "COMING SOON",
-    tags: ["COMING SOON"],
-    image: "/projects/logo.png", // <-- leading slash, file in /public/projects/
-    github: "https://github.com/you/robot",
+    title: "Subscription Manager App",
+    summary: "One simple app to manage all your subscriptions",
+    tags: ["Flutter"],
+    image: "/projects/1024.png", 
+    github: "",
     year: 2025,
     featured: true,
   },
